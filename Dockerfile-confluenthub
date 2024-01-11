@@ -1,0 +1,5 @@
+FROM confluentinc/cp-server-connect-base:7.5.2
+
+RUN   confluent-hub install --no-prompt confluentinc/kafka-connect-jdbc:latest \
+   && confluent-hub install --no-prompt confluentinc/kafka-connect-azure-data-lake-gen2-storage:latest \
+   && confluent-hub install --no-prompt confluentinc/kafka-connect-oracle-cdc:latest
